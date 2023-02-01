@@ -1,0 +1,6 @@
+name: Test React App
+on: push
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get repository code
