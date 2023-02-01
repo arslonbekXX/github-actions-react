@@ -1,0 +1,8 @@
+name: Deploy React App
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Context
+        run: echo "${{ github }}"
