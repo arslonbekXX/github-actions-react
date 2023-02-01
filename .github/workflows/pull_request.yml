@@ -1,4 +1,4 @@
-name: Deploy React App
+name: Print Pull Request Context
 on: workflow_dispatch
 jobs:
   print:
