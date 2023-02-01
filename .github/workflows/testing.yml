@@ -1,6 +1,17 @@
 name: Test React App
-on: push
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
 jobs:
   runs-on: ubuntu-latest
   steps:
     - name: Get repository code
+      uses: actions/checkout@v3
+    - name: Install dependecies
+      run: npm ci
+    - name: Test application
+      run: npm run test
