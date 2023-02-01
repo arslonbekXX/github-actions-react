@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get repository code
@@ -13,24 +13,8 @@ jobs:
         run: npm i
       - name: Test application
         run: npm run test
-  lint:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm i
       - name: Lint application
         run: npm run lint
-  build:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Get repository code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm i
       - name: Build application
         run: npm run build
       - name: Deploy
