@@ -21,6 +21,7 @@
 		"cypress:app": "cypress open",
 		"cypress:run": "cypress run",
 		"start": "react-scripts start",
+		"serve": "serve -s build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
@@ -46,6 +47,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.33.0",
-		"eslint-config-react-app": "^7.0.1"
+		"eslint-config-react-app": "^7.0.1",
+		"serve": "^14.2.0"
 	}
 }
