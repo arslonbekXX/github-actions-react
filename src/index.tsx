@@ -5,6 +5,6 @@ import Main from "./main";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
 	<React.StrictMode>
-		<Main />
+		<Main cy='heading' name='Netlify' />
 	</React.StrictMode>
 );
