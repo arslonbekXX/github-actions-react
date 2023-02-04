@@ -1,17 +1,10 @@
-function Main() {
-	return (
-		<div className='Main'>
-			<h1>Hello World</h1>
-			<header className='Main-header'>
-				<p>
-					Edit <code>src/Main.tsx</code> and save to reload.
-				</p>
-				<a className='Main-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
+import React from "react";
+
+interface MainProps {
+	name: string;
+	cy: string;
 }
- 
+
+const Main: React.FC<MainProps> = ({ name, cy }) => <h1 data-cy={cy}>Hello {name}</h1>;
+
 export default Main;
