@@ -11,7 +11,13 @@ const Main: React.FC<MainProps> = ({ name, cy }) => {
 	return (
 		<div>
 			<h1 data-cy={cy}>Hello {name}</h1>
-			<button onClick={() => setCount((v) => v + 1)}>count: {count}</button>
+			<button data-cy='decrement' onClick={() => setCount((v) => v - 1)}>
+				Decrement
+			</button>
+			<h2 data-cy='count'>Count: {count}</h2>
+			<button data-cy='increment' onClick={() => setCount((v) => v + 1)}>
+				Increment
+			</button>
 		</div>
 	);
 };
